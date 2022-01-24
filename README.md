@@ -24,7 +24,7 @@ indicates yellow gray green yellow gray
 
 ### Otherwise
 
-`h1e0l1l1o2` 
+`1h0e1l1l2o` 
 
 indicates "hello": yellow gray yellow yellow green
 
