@@ -1,4 +1,4 @@
-def basicSolve(answer, f, startingWord = ""):
+def basicSolve(f, startingWord = "", answer = ""):
 	freq = {} 
 	solved = False
 	used = []
@@ -63,7 +63,7 @@ def basicSolve(answer, f, startingWord = ""):
 			confidence = 1
 		
 		
-		print(suggestionWord, "\tconfidence =", confidence) 
+		# print(suggestionWord, "\tconfidence =", confidence) 
 
 		result = ""
 
@@ -178,7 +178,7 @@ def dynamicSolve(f, startingWord = "", answer = ""):
 			
 			suggestionWord = (sorted(goodness.items(), key=lambda x: x[1], reverse = True)[0])[0]
 			confidence = goodness[suggestionWord]/totalGoodness
-			if confidence < 0.25 and len(probe) > 0:
+			if confidence < 0.10 and len(probe) > 0:
 				suggestionWord = (sorted(probe.items(), key=lambda x: x[1], reverse = True)[0])[0]
 		
 		else:
